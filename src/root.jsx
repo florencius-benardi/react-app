@@ -1,7 +1,8 @@
 import React from "react";
-import { Switch, withRouter, HashRouter } from "react-router-dom";
+import { Switch, withRouter, HashRouter } from "react-router-dom"
 import { connect } from 'react-redux'
-import { routes, RouteWithSubRoutes } from '@/config/routes'
+import RouteHandler from './context/routes/handle'
+import routes from './context/routes/Constanta/routes'
 
 /**
  * use:
@@ -15,7 +16,7 @@ class Root extends React.Component {
       <HashRouter>
         <Switch>
           {routes.map((route, i) => (
-            <RouteWithSubRoutes key={i} {...route} />
+            <RouteHandler key={i} {...route} />
           ))}
         </Switch>
       </HashRouter>

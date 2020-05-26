@@ -3,10 +3,8 @@ import ReactDOM from 'react-dom'
 import { Provider } from "react-redux"
 import * as Sentry from '@sentry/browser'
 
-import './index.css'
-
 import * as serviceWorker from './serviceWorker'
-import store, { browsingHistory } from "@/config/store"
+import store, { browsingHistory } from "./store"
 import { ConnectedRouter } from 'connected-react-router'
 import Root from './root'
 
